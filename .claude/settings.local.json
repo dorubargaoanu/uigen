@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Skill(update-config)",
+      "Bash(npm install:*)",
+      "Bash(git:*)"
+    ]
+  }
+}
