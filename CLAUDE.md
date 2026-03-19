@@ -78,14 +78,22 @@ Three-panel resizable layout in `src/app/main-content.tsx`:
 
 Repository: https://github.com/dorubargaoanu/uigen
 
-- Always commit with clean, descriptive messages after meaningful changes
-- Always push to GitHub after committing — remote is the source of truth and enables easy reverts
+- **Commit Frequency:** Commit and push to GitHub regularly after completing meaningful work to preserve progress and maintain a clear work history
+- **Commit Messages:** Use clean, descriptive commit messages in format `<type>: <description>` with Claude co-authorship attribution
+  - Example types: `feat:` (new feature), `fix:` (bug fix), `refactor:` (code reorganization), `docs:` (documentation)
+  - Always include co-author line: `Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>`
+- **Push After Commits:** Always push commits to GitHub immediately after committing to ensure work is backed up and visible in the repository history
 - GitHub Actions workflow for Claude integration is at `.github/workflows/claude.yml`
 - Use `@claude` in any PR or issue comment to trigger Claude GitHub Actions
 
 ```bash
 git add <files>
-git commit -m "descriptive message"
+git commit -m "$(cat <<'EOF'
+<type>: <description>
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+EOF
+)"
 git push
 ```
 
