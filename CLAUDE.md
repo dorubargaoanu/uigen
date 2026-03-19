@@ -74,6 +74,21 @@ Three-panel resizable layout in `src/app/main-content.tsx`:
 
 `@/*` maps to `src/*` (configured in `tsconfig.json`).
 
+## Git & GitHub
+
+Repository: https://github.com/dorubargaoanu/uigen
+
+- Always commit with clean, descriptive messages after meaningful changes
+- Always push to GitHub after committing — remote is the source of truth and enables easy reverts
+- GitHub Actions workflow for Claude integration is at `.github/workflows/claude.yml`
+- Use `@claude` in any PR or issue comment to trigger Claude GitHub Actions
+
+```bash
+git add <files>
+git commit -m "descriptive message"
+git push
+```
+
 ## Testing
 
 Tests use Vitest + jsdom + `@testing-library/react`. Test files live alongside their component in `__tests__/` subdirectories. The vitest config is `vitest.config.mts`.
